@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+    color: #FFFFFF
+}
+
+:root {
+    --font-weigth-400: 400;
+    --font-weight-500: 500;
+}
+
+body {
+    /* 
+        background-image: url('../assets/bg-mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover; 
+    */
+
+    /* background: color img repeat position/size */
+    background: url('../assets/bg-mobile.jpg') no-repeat top center/cover;
+}
+
+#container {
+    width: 360px;
+    margin: 0 auto;
+
+    border: 1px solid white;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile > p {
+    margin-top: 8px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#profile > img {
+    width: 112px;
+    padding-bottom: 1px    
+}
