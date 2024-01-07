@@ -6,23 +6,13 @@
     box-sizing: border-box;
     
     font-family: 'Inter', sans-serif;
-
-    color: var(--text-color)
-}
-
-:root {
-    --font-weigth-400: 400;
-    --font-weight-500: 500;
-
-    --text-color: white;
-
-    --border-button: #FFFFFF80;
-    --background-button: #FFFFFF1A;
-
+    
+    color: var(--text-color);
 }
 
 .light {
     --text-color: black;
+
     --url-background-light: url("../assets/bg-mobile-light.jpg");
 
     --border-button: #00000080;
@@ -73,7 +63,6 @@ body {
 
 #profile > p {
     margin-top: 8px;
-    font-family: Inter;
     font-weight: 500;
     line-height: 24px;
 }
@@ -87,6 +76,7 @@ body {
     width: 64px ;
     position: relative;
     margin: 4px auto;
+    cursor: pointer;
 }
 
 #switch button {
@@ -97,14 +87,48 @@ body {
     background: var(--switch-background-url) white no-repeat center;
     position: absolute;
     z-index: 1;
-    left: 0;
     transform: translateY(-50%);
     top: 50%;
+    cursor: pointer;
+}
+
+
+@keyframes buttonAnimationLight {
+    from {
+        left: 0;
+    }
+    
+    to {
+        left: 50%;
+    }
 }
 
 .light #switch button {
-    left: initial;
-    right: 0;
+    animation: buttonAnimationLight 0.2s forwards;
+    transition: all 0.2s ease;
+}
+
+.light #switch button:hover {
+    outline: 8px solid #0000000D; 
+}
+
+@keyframes buttonAnimationDark {
+    from {
+        left: 50%;
+    }
+    
+    to {
+        left: 0;
+    }
+}
+
+.dark #switch button {
+    animation: buttonAnimationDark 0.2s forwards;
+    transition: all 0.2s ease;
+}
+
+.dark #switch button:hover {
+    outline: 8px solid #FFFFFF1A;
 }
 
 #switch span {
